@@ -6,26 +6,26 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import underline_img from '../../assets/images/shape/line-shape-2.svg'
-import img1 from '../../assets/images/shape/86.svg'
-import img2 from '../../assets/images/shape/87.svg'
-import img3 from '../../assets/images/shape/88.svg'
-import img4 from '../../assets/images/shape/89.svg'
-import img5 from '../../assets/images/shape/90.svg'
-import img6 from '../../assets/images/shape/91.svg'
+import underline_img from "../../assets/images/shape/line-shape-2.svg";
+import img1 from "../../assets/images/shape/86.svg";
+import img2 from "../../assets/images/shape/87.svg";
+import img3 from "../../assets/images/shape/88.svg";
+import img4 from "../../assets/images/shape/89.svg";
+import img5 from "../../assets/images/shape/90.svg";
+import img6 from "../../assets/images/shape/91.svg";
 
 const FaqContent = [
   {
     title: "Can I get a demo of EffyBuy?",
     desc: `Yes, we would be happy to demonstrate EffyBuy through a web-conference at your convenience.
-    The demo is a one hour session. To schedule your personal session, please contact sales@bizgam.com.`,
+    The demo is a one hour session. To schedule your personal session, please contact support@bizgam.com.`,
     expand: "a",
   },
   {
     title: "What types of payment do you accept?",
     desc: `We accept payment via Visa, MasterCard, American Express and PayPal. We also accept 
     payment via bank transfer or check transfer for yearly subscriptions. 
-    For more details, please contact sales@bizgam.com.`,
+    For more details, please contact support@bizgam.com.`,
     expand: "b",
   },
   {
@@ -44,7 +44,7 @@ const FaqContentTwo = [
   },
   {
     title: "Have more questions?",
-    desc: `You can connect with us instantly through live chat (24x5) or by writing to us at sales@bizgam.com.`,
+    desc: `You can connect with us instantly through live chat (24x5) or by writing to us at support@bizgam.com.`,
     expand: "f",
   },
   {
@@ -58,42 +58,16 @@ const FaqContentTwo = [
 ];
 
 export default function SixthPannel() {
-    return (
-        <div className="main-page-wrapper">
-
-        
-        <div className="faq-classic with-bg">
-        <img
-          src={img1}
-          alt="shape"
-          className="shapes shape-one"
-        />
-        <img
-          src={img2}
-          alt="shape"
-          className="shapes shape-two"
-        />
-        <img
-          src={img3}
-          alt="shape"
-          className="shapes shape-three"
-        />
-        <img
-          src={img4}
-          alt="shape"
-          className="shapes shape-four"
-        />
-        <img
-          src={img5}
-          alt="shape"
-          className="shapes shape-five"
-        />
-        <img
-          src={img6}
-          alt="shape"
-          className="shapes shape-six"
-        />
-        <div className="container" style={{"overflow":"hidden"}}>
+  return (
+    <div className="main-page-wrapper">
+      <div className="faq-classic with-bg">
+        <img src={img1} alt="shape" className="shapes shape-one" />
+        <img src={img2} alt="shape" className="shapes shape-two" />
+        <img src={img3} alt="shape" className="shapes shape-three" />
+        <img src={img4} alt="shape" className="shapes shape-four" />
+        <img src={img5} alt="shape" className="shapes shape-five" />
+        <img src={img6} alt="shape" className="shapes shape-six" />
+        <div className="container" style={{ overflow: "hidden" }}>
           <div className="title-style-four text-center mb-100 md-mb-70">
             <div className="row">
               <div className="col-lg-7 m-auto">
@@ -164,6 +138,6 @@ export default function SixthPannel() {
           </div>
         </div>
       </div>
-      </div>
-    )
+    </div>
+  );
 }

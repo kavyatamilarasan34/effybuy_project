@@ -560,6 +560,7 @@ pre code {
 .col-lg-10,
 .col-lg-11,
 .col-lg-12,
+.col-lg-13,
 .col-lg-2,
 .col-lg-3,
 .col-lg-4,
@@ -952,7 +953,6 @@ pre code {
   .offset-sm-11 {
     margin-left: 91.666667%;
   }
-  
 }
 @media (min-width: 768px) {
   .col-md {
@@ -1198,6 +1198,11 @@ pre code {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  .col-lg-13 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
   .order-lg-first {
     -ms-flex-order: -1;
@@ -5272,7 +5277,7 @@ a.close.disabled {
   // margin: 0.5rem;
   pointer-events: none;
   max-width: 500px;
-    margin: 15rem 1rem;
+  margin: 15rem 1rem;
 }
 .modal.fade .modal-dialog {
   transition: -webkit-transform 0.3s ease-out;

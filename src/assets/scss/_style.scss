@@ -945,7 +945,7 @@ body .theme-btn-nine:hover {
 .theme-main-menu {
   position: fixed;
   z-index: 99;
-  top: 0;
+  top: 60px;
   left: 0;
   right: 0;
   background: #fff;
@@ -986,8 +986,10 @@ body .theme-btn-nine:hover {
 .theme-menu-one .right-button-group .signUp-action {
   width: 155px;
   color: #fff;
-  background: var(--blue-dark);
-  box-shadow: 0px 15px 40px rgba(161, 146, 250, 0.35);
+  // background: var(--blue-dark);
+  background: #003cab;
+  box-shadow: 0px 5px 20px rgba(0, 60, 171, 255);
+  // box-shadow: 0px 15px 40px rgba(161, 146, 250, 0.35);
   margin-left: 35px;
 }
 .theme-menu-one .right-button-group .signUp-action:hover {
@@ -1922,12 +1924,12 @@ body .theme-btn-nine:hover {
 }
 #custom_gif {
   @media screen and (max-width: 575px) {
-      height: 380px;
+    height: 380px;
   }
 }
 #custom_gif_div {
   @media screen and (max-width: 575px) {
-      padding: 0;
+    padding: 0;
   }
 }
 .useable-tools-section [class*="bubble"] {
@@ -4173,35 +4175,71 @@ body .theme-btn-nine:hover {
 .client-feedback-slider-one .shapes-holder [class*="cp-img"] {
   position: absolute;
   z-index: 1;
-  border-radius: 50%;
+  // border-radius: 50%;
 }
 .client-feedback-slider-one .shapes-holder .cp-img-one {
-  width: 120px;
-  height: 60px;
-  top: 13%;
-  left: 26%;
+  width: 100px;
+  height: 50px;
+  top: 65%;
+  left: 15%;
 }
 .client-feedback-slider-one .shapes-holder .cp-img-two {
-  width: 75px;
-  height: 75px;
-  top: 46%;
-  left: 13%;
+  width: 100px;
+  height: 50px;
+  top: 65%;
+  left: 45%;
 }
 .client-feedback-slider-one .shapes-holder .cp-img-three {
-  width: 50px;
+  width: 100px;
   height: 50px;
-  bottom: 7%;
-  left: 25%;
+  top: 65%;
+  left: 75%;
 }
 .client-feedback-slider-one .shapes-holder .cp-img-four {
-  width: 120px;
-  height: 80px;
-  bottom: 22%;
-  right: 21%;
+  width: 100px;
+  height: 50px;
+  top: 75%;
+  left: 15%;
 }
+.client-feedback-slider-one .shapes-holder .cp-img-five {
+  width: 100px;
+  height: 50px;
+  top: 75%;
+  left: 45%;
+}
+.client-feedback-slider-one .shapes-holder .cp-img-six {
+  width: 100px;
+  height: 50px;
+  top: 75%;
+  left: 75%;
+}
+// .client-feedback-slider-one .shapes-holder .cp-img-one {
+//   width: 120px;
+//   height: 60px;
+//   top: 13%;
+//   left: 26%;
+// }
+// .client-feedback-slider-one .shapes-holder .cp-img-two {
+//   width: 75px;
+//   height: 75px;
+//   top: 46%;
+//   left: 13%;
+// }
+// .client-feedback-slider-one .shapes-holder .cp-img-three {
+//   width: 50px;
+//   height: 50px;
+//   bottom: 7%;
+//   left: 25%;
+// }
+// .client-feedback-slider-one .shapes-holder .cp-img-four {
+//   width: 120px;
+//   height: 80px;
+//   bottom: 22%;
+//   right: 21%;
+// }
 .client-feedback-slider-one .feedback-meta {
   position: relative;
-  padding-top: 138px;
+  padding-top: 30px;
 }
 .client-feedback-slider-one .feedback-meta .watermark {
   font-size: 160px;
@@ -4218,7 +4256,11 @@ body .theme-btn-nine:hover {
 .client-feedback-slider-one .clientSliderOne .c_img {
   width: 100px;
   height: 50px;
-  // border-radius: 50%;
+}
+.client-feedback-slider-one .clientSliderOne .star_img {
+  width: 120px;
+  height: 30px;
+  margin: -20px 0 0 10px;
 }
 .client-feedback-slider-one .clientSliderOne .info {
   padding-left: 20px;
@@ -10379,7 +10421,7 @@ body .theme-btn-nine:hover {
   font-size: 17px;
   transition: all 0.3s ease-in-out;
 }
-.demo_case_study_individual_card_download_btn{
+.demo_case_study_individual_card_download_btn {
   // position: absolute;
   // right: 10px;
   // top: 8px;
@@ -10390,15 +10432,15 @@ body .theme-btn-nine:hover {
   text-align: center;
   color: #fff;
   font-size: 17px;
-  transition: all 0.3s ease-in-out!important;
+  transition: all 0.3s ease-in-out !important;
   line-height: 50px;
   margin-top: 20px;
 }
-.demo_case_study_individual_card_download_btn:hover{
+.demo_case_study_individual_card_download_btn:hover {
   background: #ffeaa0;
   color: #212121;
 }
-.form-group .download_popup_button{
+.form-group .download_popup_button {
   // position: absolute;
   // right: 10px;
   // top: 8px;
@@ -10409,10 +10451,10 @@ body .theme-btn-nine:hover {
   text-align: center;
   color: #fff;
   font-size: 17px;
-  transition: all 0.3s ease-in-out!important;
+  transition: all 0.3s ease-in-out !important;
   line-height: 50px;
 }
-.form-group .download_popup_button a{
+.form-group .download_popup_button a {
   // position: absolute;
   // right: 10px;
   // top: 8px;
@@ -10423,29 +10465,29 @@ body .theme-btn-nine:hover {
   text-align: center;
   color: #fff;
   font-size: 17px;
-  transition: all 0.3s ease-in-out!important;
+  transition: all 0.3s ease-in-out !important;
   line-height: 50px;
 }
-.form-group .download_popup_button:hover{
+.form-group .download_popup_button:hover {
   background: #fd6a5e;
   color: #212121;
 }
-.form-group .download_popup_button a:hover{
+.form-group .download_popup_button a:hover {
   background: #fd6a5e;
   color: #212121;
 }
-.Join_other_businesses_button{
+.Join_other_businesses_button {
   background: #242424;
   width: fit-content;
   border-radius: 7px;
   text-align: center;
   color: #fff;
   font-size: 17px;
-  transition: all 0.3s ease-in-out!important;
+  transition: all 0.3s ease-in-out !important;
   margin-top: 40px;
   line-height: 50px;
 }
-.Join_other_businesses_button:hover{
+.Join_other_businesses_button:hover {
   background: #ffeaa0;
   color: #212121;
 }
@@ -10767,7 +10809,8 @@ body .theme-btn-nine:hover {
   line-height: 32px;
   color: #292929;
 }
-/*------------------- Pricing Section Six ------------------*/
+
+/*------------------- Effybuy Kaizen top buttons Section Six ------------------*/
 .pricing-nav-four {
   margin: 70px auto 35px;
   border: 2px solid #000;
@@ -10802,9 +10845,9 @@ body .theme-btn-nine:hover {
   padding: 0 15px;
   margin: 0 auto;
 }
-.pricing-table-area-six .row {
-  // margin: 0 -30px;
-}
+// .pricing-table-area-six .row {
+//   // margin: 0 -30px;
+// }
 .pricing-table-area-six .row [class*="col-"] {
   padding: 0 30px;
 }
@@ -12911,4 +12954,46 @@ body .theme-btn-nine:hover {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
+}
+
+/*--------------- Client Logo Slider-----------------*/
+
+.company-logo {
+  margin: 10px;
+  max-width: 2000px;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-slide img {
+  width: 150%;
+  height: 150%;
+  border-radius: 2px;
+}
+
+// .slick-slide .splogo-img {
+//   width: 60%;
+//   height: 60%;
+//   border-radius: 2px;
+// }
+
+// .slick-slide .mrlogo-img {
+//   width: 150%;
+//   height: 150%;
+//   border-radius: 2px;
+// }
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-active button {
+  background-color: #0f0f0f;
+}
+
+.slick-dots li {
+  width: 10px;
+  height: 10px;
 }

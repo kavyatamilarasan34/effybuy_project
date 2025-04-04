@@ -1,0 +1,31 @@
+.company-logo {
+    justify-content: center;  
+    align-items: center;      
+    width: 100%;        
+    background-color: #ffffff; 
+  }
+  
+.logo-block {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    flex-wrap: wrap;          
+    padding: 10px;
+    gap: 20px;                
+    width: 80%;              
+    margin: 0 auto;          
+    background-color: #ffffff; 
+}
+
+.logo-img {
+    width: 450px !important; 
+    height: 220px !important;
+    max-width: 100%;
+    cursor: pointer;
+}
+  
+.slider-container {
+    width: 75%;             
+    margin: 0 auto;
+    background-color: #ffffff; 
+}
