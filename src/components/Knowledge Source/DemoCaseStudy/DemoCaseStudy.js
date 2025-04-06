@@ -97,6 +97,8 @@ export default class PPT extends Component {
     // }).then(
     //   message => alert(`Mail has been sent ${message}`)
     // );
+  // "homepage": "https://vikramBizgam.github.io/EffyBuy/"
+
 
     var msg = {
       from: "Support@bizgam.com",
@@ -202,7 +204,7 @@ export default class PPT extends Component {
                           <form
                             data-toggle="validator"
                             onSubmit={(e) => {
-                              this.handleSubmit(e);
+                              this.handleSubmit(e,'https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf');
                             }}
                           >
                             <div className="form-group">
@@ -328,13 +330,6 @@ export default class PPT extends Component {
                     alt="Case Study - Bull Machine"
                     className="image-meta"
                   />
-                  {/* <h3>Bull Machine</h3>
-                  <p style={{ marginTop: "20px" }}>
-                    Bull Machine is leading machine manufacturing enterprise
-                    into tractor and construction equipment.
-                    <br />
-                    They were able to save cost on their purchases upto 3%.
-                  </p> */}
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
@@ -507,13 +502,6 @@ export default class PPT extends Component {
                     alt="Case Study - Bull Machine"
                     className="image-meta"
                   />
-                  {/* <h3>Bull Machine</h3>
-                  <p style={{ marginTop: "20px" }}>
-                    Bull Machine is leading machine manufacturing enterprise
-                    into tractor and construction equipment.
-                    <br />
-                    They were able to save cost on their purchases upto 3%.
-                  </p> */}
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
@@ -697,13 +685,6 @@ export default class PPT extends Component {
                     alt="Case Study - Bull Machine"
                     className="image-meta"
                   />
-                  {/* <h3>Bull Machine</h3>
-                  <p style={{ marginTop: "20px" }}>
-                    Bull Machine is leading machine manufacturing enterprise
-                    into tractor and construction equipment.
-                    <br />
-                    They were able to save cost on their purchases upto 3%.
-                  </p> */}
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
@@ -876,13 +857,6 @@ export default class PPT extends Component {
                     alt="Case Study - Bull Machine"
                     className="image-meta"
                   />
-                  {/* <h3>Bull Machine</h3>
-                  <p style={{ marginTop: "20px" }}>
-                    Bull Machine is leading machine manufacturing enterprise
-                    into tractor and construction equipment.
-                    <br />
-                    They were able to save cost on their purchases upto 3%.
-                  </p> */}
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
@@ -1055,13 +1029,6 @@ export default class PPT extends Component {
                     alt="Case Study - Bull Machine"
                     className="image-meta"
                   />
-                  {/* <h3>Bull Machine</h3>
-                  <p style={{ marginTop: "20px" }}>
-                    Bull Machine is leading machine manufacturing enterprise
-                    into tractor and construction equipment.
-                    <br />
-                    They were able to save cost on their purchases upto 3%.
-                  </p> */}
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
