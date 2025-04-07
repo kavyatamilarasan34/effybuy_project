@@ -35,6 +35,7 @@ const ImageSlider = () => {
     pauseOnHover: true,
     arrows: false,
     rows: 2,
+    // rows: 2,
     // slidesPerRow: 1,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
