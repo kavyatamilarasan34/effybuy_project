@@ -26,15 +26,13 @@ export default class Blog_9 extends Component {
                 Procurement teams often face:
                 </div> */}
                 <div className="individual_blog_paragraph">
-                Procurement teams often face: <br /><br />
+                Procurement teams often face: <br />
                     ❌ <b>Costly manual errors</b> in RFQs <br />
                     ❌ <b>Long lead times</b> due to slow vendor negotiations <br />
                     ❌ <b>Inefficient processes</b> that drain time and resources <br />
                 </div>
                 <div className="individual_blog_paragraph">
                 The solution? <b>Automation.</b> <br />
-                </div>
-                <div className="individual_blog_paragraph">
                 Join our exclusive webinar to discover how <b>EffyBuy’s AI-powered </b><br />
                 <b>procurement automation</b> can: <br /><br />
                     ✅ Cut processing time by up to 70% <br />
