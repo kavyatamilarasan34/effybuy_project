@@ -27,5 +27,32 @@
 .slider-container {
     width: 75%;             
     margin: 0 auto;
-    background-color: #ffffff; 
+    background-color: #ffffff;
 }
+
+.custom-arrow {
+    position: absolute;
+    top: 35%;
+    z-index: 2;
+    font-size: 32px;
+    cursor: pointer;
+    color: #003cab;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    transition: color 0.3s ease;
+  }
+  
+  .custom-arrow:hover {
+    color: #001e6b;
+  }
+  
+  .next-arrow {
+    right: -25px;
+  }
+  
+  .prev-arrow {
+    left: -25px;
+  }
+  

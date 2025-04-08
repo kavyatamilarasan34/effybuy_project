@@ -22,21 +22,40 @@ const logos = [
   USPlogo, CUlogo, FARlogo, RESlogo, BAlogo, CBlogo
 ];
 
+// Custom arrow components
+const NextArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-arrow next-arrow" onClick={onClick}>
+      ›
+    </div>
+  );
+};
+
+const PrevArrow = (props) => {
+  const { onClick } = props;
+  return (
+    <div className="custom-arrow prev-arrow" onClick={onClick}>
+      ‹
+    </div>
+  );
+};
+
 const ImageSlider = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 10000,
+    speed: 800,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0,
-    cssEase: "linear",
+    autoplaySpeed: 3000,
+    cssEase: "ease-in-out",
     pauseOnHover: true,
-    arrows: false,
+    arrows: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     rows: 2,
-    // rows: 2,
-    // slidesPerRow: 1,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
       { breakpoint: 768, settings: { slidesToShow: 2 } },

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import '../Blogs/blog.css'
 import SwiperCore, { Navigation } from 'swiper';
-import unleashing_procurment_efficiency from '../Blogs/Blog_images/Google form hD.png'
+import unleashing_procurment_efficiency from '../Blogs/Blog_images/Unleashing_Procurment_efficiency.jpg'
 SwiperCore.use([Navigation]);
 
 export default class Blog_9 extends Component {
@@ -33,46 +33,51 @@ export default class Blog_9 extends Component {
                 </div>
                 <div className="individual_blog_paragraph">
                 The solution? <b>Automation. </b> <br />
-                Join our exclusive webinar to discover how <b>EffyBuy’s AI-powered </b><br />
-                <b>procurement automation</b> can: <br /><br />
-                    ✅ Cut processing time by up to 70% <br />
-                    ✅ Reduce errors with smart RFQ generation <br />
-                    ✅ Streamline negotiations for better pricing <br />
-                    ✅ Boost compliance with automated workflows <br />
+                Join our exclusive webinar to discover  <br />
+                how <b>EffyBuy’s AI-powered procurement automation</b> can <br /> <br />
+                    ✅ Cut processing time by <b>upto 70%</b> <br />
+                    ✅ Reduce errors with <b>smart RFQ generation</b> <br />
+                    ✅ <b>Streamline negotiations</b> for better pricing <br />
+                    ✅ Boost compliance with <b>automated workflows</b> <br />
                     </div>
 
                 <div className="individual_blog_paragraph" >
-                <b style={{"color":"black"}}>What You’ll Learn:</b><br />
-                    🔹 <b>The hidden costs of manual procurement</b> – and how automation eliminates them <br />
-                    🔹 <b>Real-world case studies</b> of companies saving time and money with EffyBuy <br />
-                    🔹 <b>Live demo:</b> See EffyBuy’s automation in action  <br />
-                    🔹 <b>Best practices</b> for transitioning to an automated procurement process <br />
+                <b style={{"color":"black"}}>What You’ll Learn </b><br />
+                🎯 The <b>hidden costs of manual procurement</b> – and how automation eliminates them <br />
+                🎯 <b>Real-world case studies</b> of companies saving <b>time and money</b> with EffyBuy <br />
+                🎯 <b>Live demo:</b> See <b>EffyBuy’s automation in action</b>  <br />
+                🎯 <b>Best practices</b> for transitioning to an <b> automated procurement process</b> <br />
 
                 </div>
 
                 <div className="individual_blog_paragraph" >
                 <b style={{"color":"black"}}>Who Should Attend?</b><br />
-                    ✔ Procurement Managers & Specialists <br />
-                    ✔ Supply Chain Leaders <br />
-                    ✔ Finance & Operations Teams <br />
-                    ✔ Anyone looking to optimize procurement efficiency <br />
+                📌  Procurement Managers & Specialists <br />
+                📌  Supply Chain Leaders <br />
+                📌  Finance & Operations Teams <br />
+                📌  Anyone looking to optimize procurement efficiency <br />
                 </div>
 
-                <div className="individual_blog_paragraph" >
+                <div className="individual_blog_paragraph" style={{ textAlign: "center" }}>
                     <ul>
                         <li style={{"fontWeight":"bold", "color":"black"}}>
-                          Don’t Miss Out – Reserve Your Spot Today!
-
+                          Don’t Miss Out!<br />
+                          Reserve Your Spot Today 🚀
                         </li>
                         <div>
                             Spaces are limited. Secure your seat now and take the first step toward a faster, smarter procurement process.<br />
-                            <a href="https://docs.google.com/forms/d/1OhpoSDYBWyGAo1NO2KLrVtiTNGDn3mZuHIf-GMUPdL8/edit" 
-                               target="_blank" 
-                               rel="noopener noreferrer" 
-                               style={{ color: '#003cab' }}
-                            >
-                                🔗 Register for Free
-                            </a>
+                            <br />
+                            <button
+                                className="register_button"
+                                onClick={() =>
+                                window.open(
+                                    "https://docs.google.com/forms/d/1OhpoSDYBWyGAo1NO2KLrVtiTNGDn3mZuHIf-GMUPdL8/edit",
+                                    "_blank"
+                                )
+                                }
+                            > 
+                                Register for Free
+                            </button>
                         </div>
 
                         <br/>
@@ -81,7 +86,13 @@ export default class Blog_9 extends Component {
 
                         </li>
                         <div>
-                          Sign up anyway, and we’ll send you the recording and slides after the webinar.
+                        <a href="https://www.effybuy.com/bizgam20/apps/baf.php/B_OS_BAF_USER_REGISTER/EDIT" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               style={{ color: '#003cab' }}
+                            >
+                             Sign up
+                            </a> and we’ll send you the recording and slides after the webinar.
                         </div>
 
                         <br/>

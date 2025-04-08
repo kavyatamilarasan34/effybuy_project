@@ -4,14 +4,30 @@ import { PopupWidget,CalendlyEventListener } from "react-calendly";
 import Fab from '@material-ui/core/Fab';
 import WhatsApp from '@material-ui/icons/WhatsApp';
 import {Helmet} from "react-helmet";
+import PopUpImage from "../../assets/images/icon/pop_up_image.jpg";
 
 export default class Chatbot extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+          showPopup: sessionStorage.getItem("popupShown") !== "true"
+        };
+      }
+    
     componentDidMount() {
         const head = document.querySelector('head');
         const script = document.createElement('script');
         script.setAttribute('src',  'https://assets.calendly.com/assets/external/widget.js');
         head.appendChild(script);
+
+        // Show only on /EffyBuy (or exact match) if not already shown
+        if (!sessionStorage.getItem("popupShown")) {
+          setTimeout(() => {
+            this.setState({ showPopup: true });
+            sessionStorage.setItem("popupShown", "true"); // mark it as shown
+          }, 100);
+        }
     }
     
 
@@ -42,7 +58,12 @@ export default class Chatbot extends Component {
               });
               return false;
         }
-           
+
+        closePopup = () => {
+            this.setState({ showPopup: false });
+          };
+        
+
     render() {
         return (
             <div>
@@ -63,6 +84,97 @@ export default class Chatbot extends Component {
                     </script>
                 </Helmet>
             <div className="chatbot_main_div">
+                <div className="chatbot_whatsapp_div" >
+                    {this.state.showPopup && (
+                        
+                        <div
+                            style={{
+                                position: "fixed",
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                                display: "flex",
+                                justifyContent: "center",
+                                alignItems: "center",
+                                zIndex: 999
+                            }}
+                        >
+                           
+                        <div
+                            style={{
+                            position: "relative",
+                            backgroundColor: "#fff",
+                            padding: "11px",
+                            boxShadow: "0 5px 15px rgb(36, 35, 35)"
+                            }}
+                        >
+                            <div
+                                style={{
+                                    display: "flex",
+                                    justifyContent: "flex-end",
+                                    marginTop: "-8px",
+                                }}
+                                >
+                                <button
+                                    onClick={this.closePopup}
+                                    style={{
+                                    background: "transparent",
+                                    border: "none",
+                                    fontSize: "20px",
+                                    cursor: "pointer",
+                                    fontWeight: "bold",
+                                    color: "#333",
+                                    marginBottom: "1px",
+                                    }}
+                                >
+                                    &times;
+                                </button>
+                                </div>
+
+                            <img
+                            src={PopUpImage}
+                            alt="Popup"
+                            style={{
+                                width: "400px",
+                                borderRadius: "2px",
+                                display: "block",
+                                maxWidth: "90vw",
+                                height: "auto",
+                                paddingTop: "5px",
+                            }}
+                            />
+                            <div style={{ display: "flex", justifyContent: "center"}}>
+                                <button
+                                    className="register_button_pop_up"
+                                    onClick={() =>
+                                    window.open(
+                                        "https://docs.google.com/forms/d/1OhpoSDYBWyGAo1NO2KLrVtiTNGDn3mZuHIf-GMUPdL8/edit",
+                                        "_blank"
+                                    )
+                                    }
+                                > 
+                                    Register Now
+                                </button>
+                            </div>
+                            <div>
+                              <a href="/EffyBuy/webinars/webinar_two"
+                                onClick={() => {
+                                    this.closePopup();
+                                      window.location.href = "/EffyBuy/webinars/webinar_two"; 
+                                  }}
+                                // rel="noopener noreferrer" 
+                                style={{ display: "flex", justifyContent: "center", color: '#003cab', fontSize: "14px", marginBottom: "10px" }}
+                                >
+                                Learn more about our Webinar
+                              </a>
+                            </div>
+                        </div>
+                    </div>
+                   )}
+                </div>
+
                 <div className="chatbot_whatsapp_div" onClick={()=>{this.gtag_report_conversion('https://api.whatsapp.com/send?phone=917538851133&amp;text=Hey! Looking for EffyBuy Solution! Can you help ?')}}>
                    
                     <Fab color="primary" aria-label="add">
@@ -74,16 +186,17 @@ export default class Chatbot extends Component {
 
                 <div className="chatbot_requestdemo_div" onClick={()=>{this.gtag_report_conversion2('https://calendly.com/bizgamsupport/effybuy')}}>
                                     
-                                    <PopupWidget  url="https://calendly.com/bizgamsupport/effybuy"
-                                      text="Request Demo"
-                                       />
-                                       <CalendlyEventListener onEventScheduled={(e)=>{
+                    <PopupWidget  url="https://calendly.com/bizgamsupport/effybuy"
+                        text="Request Demo"
+                        />
+                        <CalendlyEventListener onEventScheduled={(e)=>{
                     if(e.data.event === "calendly.event_scheduled"){
                       window.open('https://www.effybuy.com/EffyBuy/calendly_conformation');
                     }
                     }}></CalendlyEventListener>
-                                    
+                               
                 </div>
+
             </div>
             </div>
         )
