@@ -67,17 +67,19 @@ export default class Blog_9 extends Component {
                         <div>
                             Spaces are limited. Secure your seat now and take the first step toward a faster, smarter procurement process.<br />
                             <br />
-                            <button style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
-                                className="register_button"
-                                onClick={() =>
-                                window.open(
-                                    "https://docs.google.com/forms/d/1OhpoSDYBWyGAo1NO2KLrVtiTNGDn3mZuHIf-GMUPdL8/edit",
-                                    "_blank"
-                                )
-                                }
-                            > 
-                                Register for Free
-                            </button>
+                            <div style={{ display: "flex", justifyContent: "center"}}>
+                                <button 
+                                    className="register_button"
+                                    onClick={() =>
+                                    window.open(
+                                        "https://docs.google.com/forms/d/1OhpoSDYBWyGAo1NO2KLrVtiTNGDn3mZuHIf-GMUPdL8/edit",
+                                        "_blank"
+                                    )
+                                    }
+                                > 
+                                    Register for Free
+                                </button>
+                            </div>
                         </div>
 
                         <br/>
