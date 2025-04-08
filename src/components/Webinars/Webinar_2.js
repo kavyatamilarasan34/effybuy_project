@@ -67,7 +67,7 @@ export default class Blog_9 extends Component {
                         <div>
                             Spaces are limited. Secure your seat now and take the first step toward a faster, smarter procurement process.<br />
                             <br />
-                            <button
+                            <button style={{ display: "flex", justifyContent: "center", marginTop: "10px" }}
                                 className="register_button"
                                 onClick={() =>
                                 window.open(

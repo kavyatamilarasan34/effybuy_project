@@ -21,11 +21,10 @@ export default class Chatbot extends Component {
         script.setAttribute('src',  'https://assets.calendly.com/assets/external/widget.js');
         head.appendChild(script);
 
-        // Show only on /EffyBuy (or exact match) if not already shown
         if (!sessionStorage.getItem("popupShown")) {
           setTimeout(() => {
             this.setState({ showPopup: true });
-            sessionStorage.setItem("popupShown", "true"); // mark it as shown
+            sessionStorage.setItem("popupShown", "true"); 
           }, 100);
         }
     }
@@ -162,11 +161,7 @@ export default class Chatbot extends Component {
                               <a href="/EffyBuy/webinars/webinar_two"
                                 onClick={() => {
                                     this.closePopup();
-                                    window.open(
-                                        "/EffyBuy/webinars/webinar_two",
-                                        "_blank"
-                                    )
-                                    //   window.location.href = "/EffyBuy/webinars/webinar_two"; 
+                                      window.location.href = "/EffyBuy/webinars/webinar_two"; 
                                   }}
                                 // rel="noopener noreferrer" 
                                 style={{ display: "flex", justifyContent: "center", color: '#003cab', fontSize: "14px", marginBottom: "10px" }}
