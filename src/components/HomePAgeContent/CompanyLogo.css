@@ -28,6 +28,7 @@
     width: 75%;             
     margin: 0 auto;
     background-color: #ffffff;
+    animation: scroll-marquee 40s linear infinite;
 }
 
 .custom-arrow {
