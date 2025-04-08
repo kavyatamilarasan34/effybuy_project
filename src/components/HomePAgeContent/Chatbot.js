@@ -162,7 +162,11 @@ export default class Chatbot extends Component {
                               <a href="/EffyBuy/webinars/webinar_two"
                                 onClick={() => {
                                     this.closePopup();
-                                      window.location.href = "/EffyBuy/webinars/webinar_two"; 
+                                    window.open(
+                                        "/EffyBuy/webinars/webinar_two",
+                                        "_blank"
+                                    )
+                                    //   window.location.href = "/EffyBuy/webinars/webinar_two"; 
                                   }}
                                 // rel="noopener noreferrer" 
                                 style={{ display: "flex", justifyContent: "center", color: '#003cab', fontSize: "14px", marginBottom: "10px" }}
