@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/EffyBuy/static/css/main.72c84f56.chunk.css",
-    "main.js": "/EffyBuy/static/js/main.59d4ca9f.chunk.js",
-    "main.js.map": "/EffyBuy/static/js/main.59d4ca9f.chunk.js.map",
+    "main.js": "/EffyBuy/static/js/main.ae36a871.chunk.js",
+    "main.js.map": "/EffyBuy/static/js/main.ae36a871.chunk.js.map",
     "runtime-main.js": "/EffyBuy/static/js/runtime-main.826fbc8b.js",
     "runtime-main.js.map": "/EffyBuy/static/js/runtime-main.826fbc8b.js.map",
     "static/css/2.1fb4c199.chunk.css": "/EffyBuy/static/css/2.1fb4c199.chunk.css",
@@ -131,7 +131,6 @@
     "static/media/number_one_tool_to_increase_profits.886b0f8b.webp": "/EffyBuy/static/media/number_one_tool_to_increase_profits.886b0f8b.webp",
     "static/media/parthiban.a7080000.jpeg": "/EffyBuy/static/media/parthiban.a7080000.jpeg",
     "static/media/pharma_casestudy.30d8c2ee.jpg": "/EffyBuy/static/media/pharma_casestudy.30d8c2ee.jpg",
-    "static/media/pop_up_image.e513c4ed.jpg": "/EffyBuy/static/media/pop_up_image.e513c4ed.jpg",
     "static/media/demoCaseStudy.css": "/EffyBuy/static/media/popup.c450f586.svg",
     "static/media/promote_better_optimizatio.32dd32d1.webp": "/EffyBuy/static/media/promote_better_optimizatio.32dd32d1.webp",
     "static/media/purchase_automate.a700da97.webp": "/EffyBuy/static/media/purchase_automate.a700da97.webp",
@@ -161,6 +160,6 @@
     "static/css/2.1fb4c199.chunk.css",
     "static/js/2.b3bf600d.chunk.js",
     "static/css/main.72c84f56.chunk.css",
-    "static/js/main.59d4ca9f.chunk.js"
+    "static/js/main.ae36a871.chunk.js"
   ]
 }
