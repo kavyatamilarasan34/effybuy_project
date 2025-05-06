@@ -5,6 +5,7 @@ import imggg2 from "../../assets/images/assets/compare_RFQ.webp";
 import imggg3 from "../../assets/images/assets/Fast_response_data.webp";
 import imggg4 from "../../assets/images/assets/tracking.webp";
 import imggg5 from "../../assets/images/assets/Effybuy_with_ERP_System.webp";
+import imggg6 from "../../assets/images/assets/RFQ_Reverse.png";
 import rfq_banner from "../../assets/images/assets/RFQ_Process_Banner.webp";
 import mov_icon_1 from "../../assets/images/assets/Auction-09.png";
 import mov_compare_1 from "../../assets/images/assets/Compare-09.png";
@@ -165,7 +166,7 @@ export default class Rfq extends Component {
                     width: "80%",
                   }}
                 >
-                  <img src={imggg} alt="RFQ Reverse Auction" />
+                  <img src={imggg6} alt="RFQ Reverse Auction" />
                   <img
                     src={imggg1}
                     alt="Data Processing Funnel"

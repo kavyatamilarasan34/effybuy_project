@@ -83,7 +83,7 @@ export default class Chatbot extends Component {
                     </script>
                 </Helmet>
             <div className="chatbot_main_div">
-                <div className="chatbot_whatsapp_div" >
+                {/* <div className="chatbot_whatsapp_div" >
                     {this.state.showPopup && (
                         
                         <div
@@ -172,7 +172,7 @@ export default class Chatbot extends Component {
                         </div>
                     </div>
                    )}
-                </div>
+                </div> */}
 
                 <div className="chatbot_whatsapp_div" onClick={()=>{this.gtag_report_conversion('https://api.whatsapp.com/send?phone=917538851133&amp;text=Hey! Looking for EffyBuy Solution! Can you help ?')}}>
                    

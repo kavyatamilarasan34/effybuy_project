@@ -10,10 +10,6 @@ var client = elasticemail.createClient({
   apiKey: '2507953C1F67E00B722664F5068BEBA4D48FCD18C3F4B23705B222B093272CFBD0B98CCDBAEA017117A684D2F9B1E260'
 });
 
-
-
-
-
 export default class PPT extends Component {
     state={
         show1:false,

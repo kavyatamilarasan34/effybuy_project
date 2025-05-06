@@ -122,12 +122,12 @@ const Routes = () => {
                     <div className="feature-blog-one blog-page-bg"><Webinar/></div>
                 </Route> */}
         <Route exact path="/EffyBuy/webinars">
-          <div className="feature-blog-one blog-page-bg">
+          {/* <div className="feature-blog-one blog-page-bg"> */}
             <div className="title-style-seven text-center">
-              <h1>Our Webinar</h1>
+              {/* <h1>Our Webinar</h1> */}
             </div>
             <Webinar />
-          </div>
+          {/* </div> */}
         </Route>
       </Switch>
 
