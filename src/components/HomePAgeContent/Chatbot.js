@@ -4,7 +4,7 @@ import { PopupWidget,CalendlyEventListener } from "react-calendly";
 import Fab from '@material-ui/core/Fab';
 import WhatsApp from '@material-ui/icons/WhatsApp';
 import {Helmet} from "react-helmet";
-import PopUpImage from "../../assets/images/icon/pop_up_image.jpg";
+// import PopUpImage from "../../assets/images/icon/pop_up_image.jpg";
 
 export default class Chatbot extends Component {
 
