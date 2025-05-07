@@ -51,10 +51,10 @@ export default function Third() {
                 data-aos-duration="1200"
               >
                   <div className="text-wrapper">
+                  <br></br>
                   <h3 className="title" style={{"textAlign":"center"}}>
                   <span>Team  Challenges </span>
-                  <br></br>
-                  <br></br>
+                  
                   </h3>
                     <img src={withouteffybuy} alt="Without Effybuy" style={{"width":"400px","margin":"0 auto"}}/>
                   <div style={{"margin":"5% 0 0 30%"}}>

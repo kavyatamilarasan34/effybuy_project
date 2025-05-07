@@ -19,7 +19,7 @@ export default class Testimonial2 extends Component {
     return (
         <div className="fancy-feature-sixteen " id="features">
           <div className="container" style={{"overflow":"hidden"}}>
-            <div className="block-style-eighteen mt-160 pt-2 md-mt-80">
+            <div className="block-style-eighteen mt-110 pt-2 md-mt-80">
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="individual_blog_paragraph" >

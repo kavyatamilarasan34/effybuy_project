@@ -2,7 +2,6 @@
     justify-content: center;  
     align-items: center;      
     width: 100%;        
-    background-color: #ffffff; 
   }
 
 
@@ -12,7 +11,7 @@
   display: flex;
   justify-content: center; 
   align-items: center;
-  padding-bottom: 30px; 
+  padding-bottom: 10px; 
   text-align: center;
   
 
@@ -31,7 +30,7 @@ box-shadow: 0px 5px 15px rgb(178, 183, 189);
   
 .slider-container {
     width: 100%; 
-    animation: scroll-marquee 40s linear infinite;
+    animation: scroll-marquee 50s linear infinite;
     padding-bottom: 20px;
     padding-top: -0.5px;
     

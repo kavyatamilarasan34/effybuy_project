@@ -83,8 +83,8 @@ const CompanyLogo = () => {
   const oddLogos = logos.filter((_, i) => i % 2 !== 0);
 
   return (
-    <div className="company-logo pb-50" style={{ backgroundColor: "#ecf0f4", paddingTop: "40px" }}>
-      <h3 className="font-rubik" style={{ textAlign: "center" }}>Marquee Customers</h3>
+    <div className="title-style-seven text-center" style={{ backgroundColor: "#ecf0f4", paddingTop: "40px" , paddingBottom: "2px" }}>
+      <h3 className="font-rubik" style={{ textAlign: "center",paddingBottom: "10px" }}>Marquee Customers</h3>
       <br />
       <ImageSlider logos={evenLogos} offset={false} />
       <ImageSlider logos={oddLogos} offset={true} />
