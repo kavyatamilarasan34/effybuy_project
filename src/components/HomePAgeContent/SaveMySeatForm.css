@@ -1,7 +1,6 @@
 .form-container {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end;      Align from left */
   padding: 2px 50px 20px;
   font-family: sans-serif;
 }
@@ -18,7 +17,7 @@
   width: 100%;
   max-width: 500px;    
   padding-top: 20px;   
-  margin-top: 80px; /* Wider form */
+  margin-top: 80px; 
 }
 
 .form-input {
@@ -28,8 +27,7 @@
   font-size: 15px;
   outline: none;
   width: 100%;      
-  border-bottom: 2px solid #000000;            /* Fill full form width */
-  /* box-sizing: border-box; */
+  border-bottom: 2px solid #000000; 
 }
 
 .form-input::placeholder {
@@ -45,8 +43,7 @@
   cursor: pointer;
   margin-top: 40px;
   width: 100%;       
-  border-radius: 4px;           /* Full width button */
-  /* box-sizing: border-box; */
+  border-radius: 4px;          
 }
 
 .form-button:hover {

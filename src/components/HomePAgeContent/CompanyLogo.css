@@ -4,32 +4,39 @@
     width: 100%;        
     background-color: #ffffff; 
   }
-  
+
+
 .logo-block {
-    display: flex;
-    justify-content: center;  
-    align-items: center;      
-    flex-wrap: wrap;          
-    padding: 10px;
-    gap: 20px;                
-    width: 80%;              
-    margin: 0 auto;          
-    background-color: #ffffff; 
+ 
+  margin: 0 !important;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  padding-bottom: 30px; 
+  text-align: center;
+  
+
 }
 
+
 .logo-img {
-    width: 450px !important; 
-    height: 220px !important;
-    max-width: 100%;
-    cursor: pointer;
+  width: 210px !important;
+  height: 120px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: block;
+box-shadow: 0px 5px 15px rgb(178, 183, 189);
+  
 }
   
 .slider-container {
-    width: 75%;             
-    margin: 0 auto;
-    background-color: #ffffff;
+    width: 100%; 
     animation: scroll-marquee 40s linear infinite;
+    padding-bottom: 20px;
+    padding-top: -0.5px;
+    
 }
+
 
 .custom-arrow {
     position: absolute;
@@ -56,4 +63,5 @@
   .prev-arrow {
     left: -25px;
   }
+  
   

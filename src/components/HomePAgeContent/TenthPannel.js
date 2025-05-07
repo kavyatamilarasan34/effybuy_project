@@ -23,10 +23,10 @@ export default class Testimonial2 extends Component {
               <div className="row align-items-center">
                 <div className="col-lg-6">
                   <div className="individual_blog_paragraph" >
-                    <p> <span style={{"color":"red", fontWeight: "bold" }}>● Live </span>  <b> Webinar </b></p> 
-                    <p style={{"color":"black"}}>
-                      <strong>When:</strong> May 24, 2025 &nbsp; <strong>Hour:</strong> 1:00 PM (GMT)
-                    </p>
+                      <p> <span style={{"color":"red", fontWeight: "bold" }}>● Live </span>  <b> Webinar </b></p> 
+                      <p style={{"color":"black"}}>
+                        <strong>When:</strong> May 24, 2025 &nbsp; <strong>Hour:</strong> 1:00 PM (GMT)
+                      </p>
                     <br />
                     <br />
                     <div className="title-style-two" >
@@ -40,8 +40,9 @@ export default class Testimonial2 extends Component {
                             style={{ width: "350px", height: "auto", marginTop: "-16px"}}
                           />
                           <br/>
-                          Securing Optimal Deals with EffyBuy's  Auto-Negotiation
-                      </h2>
+                          </h2>
+                         <h2> Securing Optimal Deals with EffyBuy's  Auto-Negotiation </h2>
+                      
                     </div>
                   </div>
                 </div>

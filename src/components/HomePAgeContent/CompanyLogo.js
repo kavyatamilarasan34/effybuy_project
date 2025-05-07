@@ -2,19 +2,19 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import GAlogo from "../../assets/images/icon/GAL.png";
-import MClogo from "../../assets/images/icon/MCL.png";
-import BUlogo from "../../assets/images/icon/BULLL.png";
-import PRlogo from "../../assets/images/icon/PROPELL.png";
-import MRlogo from "../../assets/images/icon/MRPL.png";
-import MTlogo from "../../assets/images/icon/MTL.png";
-import SPlogo from "../../assets/images/icon/SPAL.png";
-import CBlogo from "../../assets/images/icon/CELEBI.png";
-import CUlogo from "../../assets/images/icon/CUMI.png";
-import USPlogo from "../../assets/images/icon/USP.png";
-import FARlogo from "../../assets/images/icon/Fairmont.png";
-import RESlogo from "../../assets/images/icon/RASSENSE.png";
-import BAlogo from "../../assets/images/icon/Banari.png";
+import GAlogo from "../../assets/images/icon/Fly Smart_logo_1.png";
+import MClogo from "../../assets/images/icon/Messer_logo_1.png";
+import BUlogo from "../../assets/images/icon/bull_logo_1.png";
+import PRlogo from "../../assets/images/icon/Propel_logo_1.png";
+import MRlogo from "../../assets/images/icon/MRP_logo_1.png";
+import MTlogo from "../../assets/images/icon/Micro Turners_logo_1.png";
+import SPlogo from "../../assets/images/icon/s.p.apparels_logo_1.png";
+import CBlogo from "../../assets/images/icon/Celebi_logo_1.png";
+import CUlogo from "../../assets/images/icon/Cumi_logo_1.png";
+import USPlogo from "../../assets/images/icon/usp_logo_1.png";
+import FARlogo from "../../assets/images/icon/Fairmont_logo_1.png";
+import RESlogo from "../../assets/images/icon/Rassense_logo_1.png";
+import BAlogo from "../../assets/images/icon/Bannari Amman_logo_1.png";
 import "./CompanyLogo.css";
 
 const logos = [
@@ -41,21 +41,21 @@ const PrevArrow = (props) => {
   );
 };
 
-const ImageSlider = () => {
+const ImageSlider = ({ logos, offset = false }) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 8000,
-    slidesToShow: 4,
+    speed: 10000,
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
     cssEase: "linear",
     pauseOnHover: true,
-    arrows: true,
+    arrows: false,
     // nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
-    rows: 2,
+    // rows: 2,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 3 } },
       { breakpoint: 768, settings: { slidesToShow: 2 } },
@@ -67,8 +67,10 @@ const ImageSlider = () => {
     <div className="slider-container">
       <Slider {...settings}>
         {logos.map((logo, index) => (
-          <div key={index} className="logo-block">
-            <img src={logo} alt={`Logo ${index}`} className="logo-img" />
+          <div key={index} className="logo-block"  style={{
+            paddingLeft: offset && index === 0 ? "50px" : "0" 
+          }}>
+            <img src={logo} alt={`Logo ${index}`} className="logo-img mb-5"  style={{ borderRadius:"10px", maxWidth: "100%"  }}/>
           </div>
         ))}
       </Slider>
@@ -77,14 +79,15 @@ const ImageSlider = () => {
 };
 
 const CompanyLogo = () => {
+  const evenLogos = logos.filter((_, i) => i % 2 === 0);
+  const oddLogos = logos.filter((_, i) => i % 2 !== 0);
+
   return (
-    <div>
-      <h3 className="font-rubik" style={{ textAlign: "center", marginTop: "100px" }}>
-        Marquee Customers
-      </h3>
-      <div className="company-logo pb-50">
-        <ImageSlider />
-      </div>
+    <div className="company-logo pb-50" style={{ backgroundColor: "#ecf0f4", paddingTop: "40px" }}>
+      <h3 className="font-rubik" style={{ textAlign: "center" }}>Marquee Customers</h3>
+      <br />
+      <ImageSlider logos={evenLogos} offset={false} />
+      <ImageSlider logos={oddLogos} offset={true} />
     </div>
   );
 };

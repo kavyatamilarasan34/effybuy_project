@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './SaveMySeatForm.css';
 import { PopupButton, CalendlyEventListener } from "react-calendly";
 import LiveChat from "../../assets/images/icon/LiveChat.svg";
-import ProvenStrategies from "../../assets/images/icon/ProvenStrategies.svg";
+import ProvenStrategies from "../../assets/images/icon/Proven Strategies-06 copy2.5-01.svg";
 import RealDeal from "../../assets/images/icon/RealDeal.svg";
 
 export default class Testimonial2 extends Component {
@@ -23,7 +23,7 @@ export default class Testimonial2 extends Component {
                   teams?
                   </h2>
                   <br />
-                  <h4>It flexes to your work flow</h4>
+                  <h5>It flexes to your work flow</h5>
                   <div
                     onClick={(e) => {
                       this.handleSubmit(
@@ -109,9 +109,9 @@ export default class Testimonial2 extends Component {
                                 className="title-style-one"
                                 style={{ textAlign: "center" }}
                               >
-                              <h4>Proven strategies from <br />
+                              <h7>Proven strategies from <br />
                                 procurement teams at <br />
-                                the top of their game.</h4>
+                                the top of their game</h7>
                           
                               </div>
                         </div>
@@ -138,8 +138,7 @@ export default class Testimonial2 extends Component {
                             style={{ textAlign: "center" }}
                           >
                             
-                            <h4>Reals deals. Real datas.<br />
-                            Zero fluff</h4>
+                            <h7>Reals deals <br />Real datas<br /> Zero fluff</h7>
                           </div>
                         
                         </div>
@@ -167,9 +166,9 @@ export default class Testimonial2 extends Component {
                            style={{ textAlign: "center" }}
                           >
                             
-                            <h4>Live Q&A-Bring your<br />
+                            <h7>Live Q&A-Bring your<br />
                             toughest supplier <br />
-                            senarios for expert tips</h4>
+                            senarios for expert tips</h7>
                           </div>
                       
                         </div>

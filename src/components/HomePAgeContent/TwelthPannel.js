@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import './SaveMySeatForm.css';
 import bgimg from "../../assets/images/shape/1.svg";
-import WhoShouldJoin from "../../assets/images/shape/WhoShouldJoin.svg";
+import WhoShouldJoin from "../../assets/images/shape/ILLUSTRATOR1.jpg";
 import ActionableSteps from "../../assets/images/icon/ActionableSteps.svg";
 import CaseStudy from "../../assets/images/icon/CaseStudy.svg";
 import Demo from "../../assets/images/icon/Demo.svg";
@@ -35,10 +35,10 @@ export default class Testimonial2 extends Component {
                    className="title-style-one"
                    style={{ textAlign: "center" }}
                 >
-                  <h4>
+                  {/* <h4>
                     The 3 costly mistakes team makes in <br />
                     supplier negotiations and how to avoid them
-                  </h4>
+                  </h4> */}
                 </div>
               </div>
             </div>
@@ -54,17 +54,17 @@ export default class Testimonial2 extends Component {
                 <div className="block-style-twentyFour">
                   <div >
                     <div
-                      className="icon d-flex align-items-left"
-                      style={{ background: "#fceadf",borderRadius: "55px" }}
+                      className="icon d-flex align-items-center"
+                      style={{ background: "#fceadf", borderRadius: "25px", width: "50px", height: "50px" }}
                     >
-                      <img src={Demo} alt="icon" />
+                      <img src={Demo} alt="icon" style={{ width: "100%", height: "80%" }} />
                     </div>
                     <br />
                     <div  className="title-style-one"
                        style={{ textAlign: "left" }}>
-                      <h4><b>Live Demo</b></h4> <br />
-                      <h5>Watch live auction with <br />an L1 
-                      supplier in real time</h5>
+                      <h5><b>Live Demo</b></h5> <br />
+                      <h7>Watch live auction with <br />an L1 
+                      supplier in real time</h7>
                     </div>
                   </div>
                 </div>
@@ -79,18 +79,19 @@ export default class Testimonial2 extends Component {
                 <div className="block-style-twentyFour">
                   <div >
                     <div
-                      className="icon d-flex align-items-center justify-content-center"
-                      style={{ background: "#e1f7f5",borderRadius: "55px" }}
+                      className="icon d-flex align-items-center"
+                      style={{ background: "#e1f7f5", borderRadius: "25px", width: "50px", height: "50px" }}
+                      
                     >
-                      <img src={CaseStudy} alt="icon" />
+                      <img src={CaseStudy} alt="icon" style={{ width: "100%", height: "70%" }} />
                     </div>
                     <br />
                     <div className="title-style-one"
                        style={{ textAlign: "left" }}>
-                    <h4><b>Case Study</b></h4><br />
-                    <h5>How a leading equipment
+                    <h5><b>Case Study</b></h5><br />
+                    <h7>How a leading equipment
                      manufacturing yielded 10-15% 
-                     savings using <br />Auto-Negotiation</h5>
+                     savings using Auto-Negotiation</h7>
 
                     </div>
                   </div>
@@ -105,18 +106,19 @@ export default class Testimonial2 extends Component {
                 <div className="block-style-twentyFour">
                   <div >
                     <div
-                      className="icon d-flex align-items-center justify-content-center"
-                      style={{ background: "#f6eefc",borderRadius: "55px" }}
+                      className="icon d-flex align-items-center"
+                      style={{ background: "#f6eefc", borderRadius: "25px", width: "50px", height: "50px" }}
+                
                     >
-                      <img src={ActionableSteps} alt="icon" />
+                      <img src={ActionableSteps} alt="icon" style={{ width: "100%", height: "80%" }}/>
                     </div>
                     <br />
                     <div className="title-style-one"
                        style={{ textAlign: "left" }}>
-                      <h4><b>Actionable Steps</b></h4> <br />
-                      <h5>Implement automated 
+                      <h5><b>Actionable Steps</b></h5> <br />
+                      <h7>Implement automated 
                       negotiations in your 
-                      procurement process</h5>
+                      procurement process</h7>
                     </div>
                   </div>
                 </div>{" "}
@@ -130,7 +132,7 @@ export default class Testimonial2 extends Component {
               <div className="row" style={{"alignItems":"center"}}>
                 {/* <div className="col-md-6 text-center"> */}
                   <div
-                    className="col-lg-6 d-flex flex-column align-items-center mb-35"
+                    className="col-lg-7 d-flex flex-column align-items-center mb-35"
                     data-aos="fade-right"
                     data-aos-duration="1200"
                   >
@@ -144,11 +146,11 @@ export default class Testimonial2 extends Component {
           
                   {/* <div className="col-md-6"> */}
                     <div
-                      className="col-lg-6 d-flex flex-column align-items-start mb-35"
+                      className="col-lg-5 d-flex flex-column align-items-start mb-35"
                       data-aos="fade-left"
                       data-aos-duration="1200"
                     >
-                      <div
+                      {/* <div
                         className="icon d-flex justify-content-start align-items-center"
                         style={{
                           borderRadius: "55px",
@@ -160,14 +162,14 @@ export default class Testimonial2 extends Component {
                         >
                         <img src={Play} alt="icon" />
                       </div>
-                      <br />
+                      <br /> */}
                       <div className="title-style-one"
                         style={{ textAlign: "left" }}>
                         <h2>Who Should <br /> Join? </h2> 
                         <br />
-                        <h7>Procurement & Sourcing Managers <br />
-                        Supply Chain & Vendors Leaders <br />
-                        Finance pros focused on cost control <br />
+                        <h7>●  Procurement & Sourcing Managers <br />
+                        ●  Supply Chain & Vendors Leaders <br />
+                        ●  Finance pros focused on cost control <br />
                         Anyone who's done "just one more round of negotiation"</h7>
                       </div>
                    </div>

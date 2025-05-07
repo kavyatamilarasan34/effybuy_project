@@ -70,7 +70,7 @@ export default class PPT extends Component {
     });
   };
 
-  handleSubmit(e, caseStudyLink) {
+  handleSubmit(e) {
     e.preventDefault();
     emailjs.sendForm(
       "service_h28clne",
@@ -204,7 +204,7 @@ export default class PPT extends Component {
                           <form
                             data-toggle="validator"
                             onSubmit={(e) => {
-                              this.handleSubmit(e,'https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf');
+                              this.handleSubmit(e);
                             }}
                           >
                             <div className="form-group">

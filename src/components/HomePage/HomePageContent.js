@@ -31,7 +31,7 @@ class HomePageContent extends React.Component {
     return (
       // <DocumentMeta {...meta}>
       <>
-        <FirstPannel firstimg={first_pannel_image} />
+        <FirstPannel firstimg={first_pannel_image} /><br /><br /><br />
         <CompanyLogo />
         <SecondPannel />
         <ThirdPannel />
