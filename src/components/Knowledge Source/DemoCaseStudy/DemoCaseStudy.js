@@ -25,6 +25,8 @@ export default class PPT extends Component {
     success: false,
     email: "",
     name: "",
+    companyName: "",
+    selectedCaseStudyLink: "", 
   };
 
   infoChange(e) {
@@ -38,11 +40,13 @@ export default class PPT extends Component {
       show1: false,
     });
   };
-  handleShow1 = () => {
+  handleShow1 = (link) => {
     this.setState({
       show1: true,
+      selectedCaseStudyLink: link, // ← Store the clicked case study link
     });
   };
+
   handleClose2 = () => {
     this.setState({
       show2: false,
@@ -70,53 +74,88 @@ export default class PPT extends Component {
     });
   };
 
-  handleSubmit(e) {
+  // handleSubmit(e) {
+  //   e.preventDefault();
+  //   emailjs.sendForm(
+  //     "service_h28clne",
+  //     "template_vrxq1v7",
+  //     e.target,
+  //     "_SkP_OebRj5Q-nHBw"
+  //   );
+  //   // window.open('https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf','_blank');
+  //   this.setState({
+  //     show1: false,
+  //     success: true,
+  //   });
+  //   // window.Email.send({
+  //   //     Host : "smtp.gmail.com",
+  //   //     Username : "support@bizgam.com",
+  //   //     Password : "B1zG@m4u",
+  //   //     // Username : "ai@bizgam.com",
+  //   //     // Password : "florescer@2021",
+  //   //     // Credential : true,
+  //   //     To : this.state.email,
+  //   //     From : "support@bizgam.com",
+  //   //     Subject : "Effybuy : Download Case Study",
+  //   //     Body : "<html><strong><a href='https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf'>Click here</a></strong><em> to download the case study.</em></html>"
+  //   // }).then(
+  //   //   message => alert(`Mail has been sent ${message}`)
+  //   // );
+  // // "homepage": "https://vikramBizgam.github.io/EffyBuy/"
+
+
+  //   var msg = {
+  //     from: "Support@bizgam.com",
+  //     from_name: "Admin",
+  //     to: this.state.email,
+  //     subject: "Effybuy : Download Case Study",
+  //     // body_html:
+  //     //   "<html><strong><a href='https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf'>Click here</a></strong><em> to download the case study.</em></html>",
+  //     body_html: "<html><strong><a href='${caseStudyLink}'>Click here</a></strong><em> to download the case study.</em></html>"
+  //   };
+
+  //   client.mailer.send(msg, function (err, result) {
+  //     if (err) {
+  //       return console.error(err);
+  //     }
+
+  //     console.log(result);
+  //   });
+  // }
+  handleSubmit(e,caseStudyLink) {
     e.preventDefault();
-    emailjs.sendForm(
-      "service_h28clne",
-      "template_vrxq1v7",
-      e.target,
-      "_SkP_OebRj5Q-nHBw"
-    );
-    // window.open('https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf','_blank');
-    this.setState({
-      show1: false,
-      success: true,
-    });
-    // window.Email.send({
-    //     Host : "smtp.gmail.com",
-    //     Username : "support@bizgam.com",
-    //     Password : "B1zG@m4u",
-    //     // Username : "ai@bizgam.com",
-    //     // Password : "florescer@2021",
-    //     // Credential : true,
-    //     To : this.state.email,
-    //     From : "support@bizgam.com",
-    //     Subject : "Effybuy : Download Case Study",
-    //     Body : "<html><strong><a href='https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf'>Click here</a></strong><em> to download the case study.</em></html>"
-    // }).then(
-    //   message => alert(`Mail has been sent ${message}`)
-    // );
-  // "homepage": "https://vikramBizgam.github.io/EffyBuy/"
 
+    const { email, name, companyName } = this.state;
 
-    var msg = {
-      from: "Support@bizgam.com",
-      from_name: "Admin",
-      to: this.state.email,
-      subject: "Effybuy : Download Case Study",
-      // body_html:
-      //   "<html><strong><a href='https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf'>Click here</a></strong><em> to download the case study.</em></html>",
-      body_html: "<html><strong><a href='${caseStudyLink}'>Click here</a></strong><em> to download the case study.</em></html>"
+    const msg = {
+      from_name: "Admin",          
+      from_email: "kavyatamilarasan34@gmail.com", 
+      to_email: email,              
+      subject: "Case Study Download Lead – Please Reach Out", 
+      caseStudyLink: caseStudyLink,
+      name: name,   
+      companyName: companyName, 
     };
 
-    client.mailer.send(msg, function (err, result) {
-      if (err) {
-        return console.error(err);
+    emailjs.send(
+      "service_eqadgb6",  
+      "template_rvd8sen",  
+      msg,  
+      "ehnz-SidZ-mnMipo0"  
+    ).then(
+      () => {
+        
+        this.setState({
+          show1: false,
+          success: true,
+        });
+        window.open(caseStudyLink, "_blank");
+      },
+      (error) => {
+        console.error("Failed to send email:", error);
+        alert("Failed to send email. Please try again.");
       }
-
-      console.log(result);
-    });
+    );
   }
 
   render() {
@@ -161,7 +200,9 @@ export default class PPT extends Component {
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
-                      onClick={this.handleShow1}
+                      onClick={() =>
+                        this.handleShow1('https://docs.google.com/presentation/d/1b7HVB30WXDv5ErySK666yB23M5VqW1mY/export?format=pdf')
+                      }
                     >
                       Download
                     </button>
@@ -204,7 +245,7 @@ export default class PPT extends Component {
                           <form
                             data-toggle="validator"
                             onSubmit={(e) => {
-                              this.handleSubmit(e);
+                              this.handleSubmit(e,this.state.selectedCaseStudyLink);
                             }}
                           >
                             <div className="form-group">
@@ -250,6 +291,10 @@ export default class PPT extends Component {
                                 placeholder="Company Name"
                                 required
                                 name="companyName"
+                                value={this.state.companyName}
+                                onChange={(e) => {
+                                  this.infoChange(e);
+                                }}
                               />
                               <div className="help-block with-errors"></div>
                             </div>
@@ -292,7 +337,7 @@ export default class PPT extends Component {
                     </Modal>
 
                     {/* Download link send to email */}
-                    <Modal
+                    {/* <Modal
                       show={this.state.success}
                       onHide={this.handleCloseSuccess}
                       backdrop="static"
@@ -319,7 +364,7 @@ export default class PPT extends Component {
                           </div>
                         </div>
                       </Modal.Body>
-                    </Modal>
+                    </Modal> */}
                     {/* Download link send to email end*/}
                   </div>
                 </div>
@@ -333,7 +378,9 @@ export default class PPT extends Component {
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
-                      onClick={this.handleShow1}
+                      onClick={() =>
+                        this.handleShow1('https://drive.google.com/file/d/1YFKefdORLs5_JQJVJlFTqq-afvKxHEyX/view?usp=drive_link')
+                      }
                     >
                       Download
                     </button>
@@ -376,7 +423,7 @@ export default class PPT extends Component {
                           <form
                             data-toggle="validator"
                             onSubmit={(e) => {
-                              this.handleSubmit(e);
+                              this.handleSubmit(e,this.state.selectedCaseStudyLink);
                             }}
                           >
                             <div className="form-group">
@@ -422,6 +469,10 @@ export default class PPT extends Component {
                                 placeholder="Company Name"
                                 required
                                 name="companyName"
+                                value={this.state.companyName}
+                                onChange={(e) => {
+                                  this.infoChange(e);
+                                }}
                               />
                               <div className="help-block with-errors"></div>
                             </div>
@@ -464,7 +515,7 @@ export default class PPT extends Component {
                     </Modal>
 
                     {/* Download link send to email */}
-                    <Modal
+                    {/* <Modal
                       show={this.state.success}
                       onHide={this.handleCloseSuccess}
                       backdrop="static"
@@ -491,7 +542,7 @@ export default class PPT extends Component {
                           </div>
                         </div>
                       </Modal.Body>
-                    </Modal>
+                    </Modal> */}
                     {/* Download link send to email end*/}
                   </div>
                 </div>
@@ -505,7 +556,9 @@ export default class PPT extends Component {
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
-                      onClick={this.handleShow1}
+                      onClick={() =>
+                        this.handleShow1('https://drive.google.com/file/d/1pFkPa_Hbrw22_QGuigJYy2WkohS7seW0/view?ts=681c8759')
+                      }
                     >
                       Download
                     </button>
@@ -548,7 +601,7 @@ export default class PPT extends Component {
                           <form
                             data-toggle="validator"
                             onSubmit={(e) => {
-                              this.handleSubmit(e);
+                              this.handleSubmit(e,this.state.selectedCaseStudyLink);
                             }}
                           >
                             <div className="form-group">
@@ -594,6 +647,10 @@ export default class PPT extends Component {
                                 placeholder="Company Name"
                                 required
                                 name="companyName"
+                                value={this.state.companyName}
+                                onChange={(e) => {
+                                  this.infoChange(e);
+                                }}
                               />
                               <div className="help-block with-errors"></div>
                             </div>
@@ -636,7 +693,7 @@ export default class PPT extends Component {
                     </Modal>
 
                     {/* Download link send to email */}
-                    <Modal
+                    {/* <Modal
                       show={this.state.success}
                       onHide={this.handleCloseSuccess}
                       backdrop="static"
@@ -663,7 +720,7 @@ export default class PPT extends Component {
                           </div>
                         </div>
                       </Modal.Body>
-                    </Modal>
+                    </Modal> */}
                     {/* Download link send to email end*/}
                   </div>
                 </div>
@@ -688,7 +745,9 @@ export default class PPT extends Component {
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
-                      onClick={this.handleShow1}
+                      onClick={() =>
+                        this.handleShow1('https://drive.google.com/file/d/1yK9jeutg_RNGDCEXZTkbHWRvmVQeQZr8/view?usp=drive_link')
+                      }
                     >
                       Download
                     </button>
@@ -731,7 +790,7 @@ export default class PPT extends Component {
                           <form
                             data-toggle="validator"
                             onSubmit={(e) => {
-                              this.handleSubmit(e);
+                              this.handleSubmit(e,this.state.selectedCaseStudyLink);
                             }}
                           >
                             <div className="form-group">
@@ -777,6 +836,10 @@ export default class PPT extends Component {
                                 placeholder="Company Name"
                                 required
                                 name="companyName"
+                                value={this.state.companyName}
+                                onChange={(e) => {
+                                  this.infoChange(e);
+                                }}
                               />
                               <div className="help-block with-errors"></div>
                             </div>
@@ -819,7 +882,7 @@ export default class PPT extends Component {
                     </Modal>
 
                     {/* Download link send to email */}
-                    <Modal
+                    {/* <Modal
                       show={this.state.success}
                       onHide={this.handleCloseSuccess}
                       backdrop="static"
@@ -846,7 +909,7 @@ export default class PPT extends Component {
                           </div>
                         </div>
                       </Modal.Body>
-                    </Modal>
+                    </Modal> */}
                     {/* Download link send to email end*/}
                   </div>
                 </div>
@@ -860,7 +923,9 @@ export default class PPT extends Component {
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
-                      onClick={this.handleShow1}
+                      onClick={() =>
+                        this.handleShow1('https://drive.google.com/file/d/1yK9jeutg_RNGDCEXZTkbHWRvmVQeQZr8/view?usp=drive_link')
+                      }
                     >
                       Download
                     </button>
@@ -903,7 +968,7 @@ export default class PPT extends Component {
                           <form
                             data-toggle="validator"
                             onSubmit={(e) => {
-                              this.handleSubmit(e);
+                              this.handleSubmit(e,this.state.selectedCaseStudyLink);
                             }}
                           >
                             <div className="form-group">
@@ -949,6 +1014,10 @@ export default class PPT extends Component {
                                 placeholder="Company Name"
                                 required
                                 name="companyName"
+                                value={this.state.companyName}
+                                onChange={(e) => {
+                                  this.infoChange(e);
+                                }}
                               />
                               <div className="help-block with-errors"></div>
                             </div>
@@ -991,7 +1060,7 @@ export default class PPT extends Component {
                     </Modal>
 
                     {/* Download link send to email */}
-                    <Modal
+                    {/* <Modal
                       show={this.state.success}
                       onHide={this.handleCloseSuccess}
                       backdrop="static"
@@ -1018,7 +1087,7 @@ export default class PPT extends Component {
                           </div>
                         </div>
                       </Modal.Body>
-                    </Modal>
+                    </Modal> */}
                     {/* Download link send to email end*/}
                   </div>
                 </div>
@@ -1032,7 +1101,9 @@ export default class PPT extends Component {
                   <div>
                     <button
                       className="demo_case_study_individual_card_download_btn downloadbtn"
-                      onClick={this.handleShow1}
+                      onClick={() =>
+                        this.handleShow1('https://drive.google.com/file/d/1dYKWmMh7UVOes1M8cyPilDp-qX2yOaHM/view?usp=drive_link')
+                      }
                     >
                       Download
                     </button>
@@ -1075,7 +1146,7 @@ export default class PPT extends Component {
                           <form
                             data-toggle="validator"
                             onSubmit={(e) => {
-                              this.handleSubmit(e);
+                              this.handleSubmit(e,this.state.selectedCaseStudyLink);
                             }}
                           >
                             <div className="form-group">
@@ -1121,6 +1192,10 @@ export default class PPT extends Component {
                                 placeholder="Company Name"
                                 required
                                 name="companyName"
+                                value={this.state.companyName}
+                                onChange={(e) => {
+                                  this.infoChange(e);
+                                }}
                               />
                               <div className="help-block with-errors"></div>
                             </div>
@@ -1163,7 +1238,7 @@ export default class PPT extends Component {
                     </Modal>
 
                     {/* Download link send to email */}
-                    <Modal
+                    {/* <Modal
                       show={this.state.success}
                       onHide={this.handleCloseSuccess}
                       backdrop="static"
@@ -1190,7 +1265,7 @@ export default class PPT extends Component {
                           </div>
                         </div>
                       </Modal.Body>
-                    </Modal>
+                    </Modal> */}
                     {/* Download link send to email end*/}
                   </div>
                 </div>

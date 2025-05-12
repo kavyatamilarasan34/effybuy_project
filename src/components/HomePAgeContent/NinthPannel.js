@@ -36,7 +36,7 @@ export default function Third() {
                         <img src={right} alt="k" style={{"position":"absolute","left":"-20px","top":"10px"}} /> Cut negotiation time by 60% through auctions 
                       </li>
                       <li style={{"position":"relative","margin":"10px", color: "black"}}>
-                        <img src={right} alt="k" style={{"position":"absolute","left":"-20px","top":"10px"}} /> Maintain strong suupplier relationshipswith fair, transparent deals
+                        <img src={right} alt="k" style={{"position":"absolute","left":"-20px","top":"10px"}} /> Maintain strong supplier relationships with fair, transparent deals
                       </li>
                       <li style={{"position":"relative","margin":"10px", color: "black"}}>
                         <img src={right} alt="k" style={{"position":"absolute","left":"-20px","top":"10px"}} /> Eliminate guesswork with real-time auctions

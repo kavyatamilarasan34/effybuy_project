@@ -49,3 +49,21 @@
 .form-button:hover {
   background-color: #6849f1;
 }
+
+.whatsapp-button {
+  background-color: #0cb473;
+  color: #ffffff;
+  padding: 9px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 60px;
+  width: 70%;       
+  border-radius: 4px;          
+}
+
+.whatsapp-button:hover {
+  background-color: #06b873;
+}
+
