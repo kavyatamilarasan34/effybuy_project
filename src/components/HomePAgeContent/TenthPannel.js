@@ -50,6 +50,11 @@ export default class Testimonial2 extends Component {
 
     const { name, email, mobile, userCompanyName, designation, typeOfIndustry, webinarSource } = this.state;
 
+    if (!name || !email || !mobile) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
     const msg = {
       from_name: "Admin",          
       from_email: "support@bizgam.com", 
@@ -85,10 +90,6 @@ export default class Testimonial2 extends Component {
           show1: false,
           success: true,
         });
-        window.open(
-          "https://chat.whatsapp.com/J2grLr3lYr75ugplsRt4zT",
-          "_blank"
-        );
        
       },
       (error) => {
@@ -96,6 +97,20 @@ export default class Testimonial2 extends Component {
         alert("Failed to send email. Please try again.");
       }
     );
+  }
+
+  componentDidUpdate(_, prevState) {
+    if (!prevState.success && this.state.success) {
+      this.redirectTimer = setTimeout(() => {
+        window.open("https://chat.whatsapp.com/J2grLr3lYr75ugplsRt4zT", "_blank");
+      }, 3000); 
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.redirectTimer) {
+      clearTimeout(this.redirectTimer);
+    }
   }
 
   render() {
@@ -251,7 +266,7 @@ export default class Testimonial2 extends Component {
                                 > 
                                     Join our WhatsApp Group now
                                 </button><br/>
-                                If the redirection does not occur automatically,<br/>Please click here to join the WatsApp group.
+                                If the redirection does not occur automatically,<br/>Please click here to join the WhatsApp group.
                             </div>
                           </div>
                         </Modal.Body>
