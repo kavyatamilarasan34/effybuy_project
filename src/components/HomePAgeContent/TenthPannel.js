@@ -253,7 +253,8 @@ export default class Testimonial2 extends Component {
                             <div className="ppt_individual_card_title">
                               Thank you for registering for this session.   <br/> <br/>
                                <b>Mastering Negotiation: Securing Optimal Deals <br/>with EffyBuy's Auto Negotiation</b> <br/><br/>
-                              Sunday 24th May 2025, 1:00-2:00pm <br/><br/>
+                              Sunday 24th May 2025, 1:00-2:00pm <br/>
+                              <hr style={{ width: "80%", margin: "15px auto" ,backgroundColor: "#ccc" }} />
                               You are being redirected to our webinar community and WhatsApp group.  <br/>
                               <button 
                                     className="whatsapp-button"
