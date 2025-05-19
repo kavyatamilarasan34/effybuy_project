@@ -123,7 +123,7 @@ export default class Testimonial2 extends Component {
                   <div className="individual_blog_paragraph" >
                       <p> <span style={{"color":"red", fontWeight: "bold" }}>● Live </span>  <b> Webinar </b></p> 
                       <p style={{"color":"black"}}>
-                        <strong>When:</strong> May 24, 2025 &nbsp; <strong>Hour:</strong> 1:00 PM (GMT)
+                        <strong>When:</strong> June 8, 2025 &nbsp; <strong>Hour:</strong> 4:00 PM (GMT)
                       </p>
                     <br />
                     <br />
@@ -253,7 +253,7 @@ export default class Testimonial2 extends Component {
                             <div className="ppt_individual_card_title">
                               Thank you for registering for this session.   <br/> <br/>
                                <b>Mastering Negotiation: Securing Optimal Deals <br/>with EffyBuy's Auto Negotiation</b> <br/><br/>
-                              Sunday 24th May 2025, 1:00-2:00pm <br/>
+                              Sunday 8th June 2025, 4:00pm <br/>
                               <hr style={{ width: "80%", margin: "15px auto" ,backgroundColor: "#ccc" }} />
                               You are being redirected to our webinar community and WhatsApp group.  <br/>
                               <button 
