@@ -56,7 +56,7 @@ export default class Testimonial2 extends Component {
     }
 
     const msg = {
-      from_name: "Admin",          
+      from_name: "Support",          
       from_email: "support@bizgam.com", 
       to_email: email,   
       // cc: "",           
@@ -72,10 +72,10 @@ export default class Testimonial2 extends Component {
     };
 
     emailjs.send(
-      "service_eqadgb6",  
-      "template_dm3g01k",  
+      "service_h28clne",  
+      "template_0vm3br4",  
       msg,  
-      "ehnz-SidZ-mnMipo0"  
+      "_SkP_OebRj5Q-nHBw"  
     ).then(
       () => {
         

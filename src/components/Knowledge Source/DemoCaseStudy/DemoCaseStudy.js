@@ -128,9 +128,9 @@ export default class PPT extends Component {
     const { email, name, companyName } = this.state;
 
     const msg = {
-      from_name: "Admin",          
-      from_email: "kavyatamilarasan34@gmail.com", 
-      to_email: email,              
+      from_name: "Support",          
+      from_email: "support@bizgam.com", 
+      user_email: email,              
       subject: "Case Study Download Lead – Please Reach Out", 
       caseStudyLink: caseStudyLink,
       name: name,   
@@ -138,10 +138,10 @@ export default class PPT extends Component {
     };
 
     emailjs.send(
-      "service_eqadgb6",  
-      "template_rvd8sen",  
+      "service_h28clne",  
+      "template_vrxq1v7",  
       msg,  
-      "ehnz-SidZ-mnMipo0"  
+      "_SkP_OebRj5Q-nHBw"  
     ).then(
       () => {
         
