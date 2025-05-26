@@ -5,6 +5,7 @@ import Fab from '@material-ui/core/Fab';
 import WhatsApp from '@material-ui/icons/WhatsApp';
 import {Helmet} from "react-helmet";
 // import PopUpImage from "../../assets/images/icon/pop_up_image.jpg";
+import PopUpImage from "../../assets/images/icon/webinar_june.jpg";
 
 export default class Chatbot extends Component {
 
@@ -13,6 +14,9 @@ export default class Chatbot extends Component {
         this.state = {
           showPopup: sessionStorage.getItem("popupShown") !== "true"
         };
+        // this.state = {
+        //     showPopup: true
+        //     };
       }
     
     componentDidMount() {
@@ -83,7 +87,7 @@ export default class Chatbot extends Component {
                     </script>
                 </Helmet>
             <div className="chatbot_main_div">
-                {/* <div className="chatbot_whatsapp_div" >
+                <div className="chatbot_whatsapp_div" >
                     {this.state.showPopup && (
                         
                         <div
@@ -106,7 +110,8 @@ export default class Chatbot extends Component {
                             position: "relative",
                             backgroundColor: "#fff",
                             padding: "11px",
-                            boxShadow: "0 5px 15px rgb(36, 35, 35)"
+                            boxShadow: "0 10px 20px rgb(43, 41, 41)",
+                            borderRadius: "5px"
                             }}
                         >
                             <div
@@ -147,17 +152,28 @@ export default class Chatbot extends Component {
                             <div style={{ display: "flex", justifyContent: "center"}}>
                                 <button
                                     className="register_button_pop_up"
-                                    onClick={() =>
-                                    window.open(
-                                        "https://docs.google.com/forms/d/1OhpoSDYBWyGAo1NO2KLrVtiTNGDn3mZuHIf-GMUPdL8/edit",
-                                        "_blank"
-                                    )
-                                    }
+                                    onClick={() => {
+                                        this.closePopup();
+                                        window.location.href = "/EffyBuy/webinars";
+                                    }}
                                 > 
                                     Register Now
                                 </button>
                             </div>
-                            <div>
+                            <div style={{ display: "flex", justifyContent: "center"}}>
+                                <button
+                                    className="learn-more-button"
+                                    onClick={() => {
+                                        this.closePopup();
+                                        window.location.href = "/EffyBuy/webinars";
+                                    }}
+                                > 
+                                    <span className="left-icon">🔗</span>
+                                    Learn more about our Webinar
+                                    <span className="right-arrow">&gt;</span>
+                                </button>
+                            </div>
+                            {/* <div>
                               <a href="/EffyBuy/webinars/webinar_two"
                                 onClick={() => {
                                     this.closePopup();
@@ -168,11 +184,11 @@ export default class Chatbot extends Component {
                                 >
                                 Learn more about our Webinar
                               </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                    )}
-                </div> */}
+                </div>
 
                 <div className="chatbot_whatsapp_div" onClick={()=>{this.gtag_report_conversion('https://api.whatsapp.com/send?phone=917538851133&amp;text=Hey! Looking for EffyBuy Solution! Can you help ?')}}>
                    

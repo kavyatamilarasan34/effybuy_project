@@ -45,6 +45,12 @@
     background-color: #6f55ff!important;
 }
 
+.pop_up_image {
+        bottom: 10px!important;
+        right: 10px!important;
+        border-radius: 5px ;
+    }
+
 @media only screen and (max-width: 560px){
     .chatbot_main_div > .chatbot_whatsapp_div > button > a > span{
         display: none;
